@@ -1,42 +1,35 @@
-<h1>Failed RDP to IP Geolocation Information</h1>
-
-
- ### [YouTube Demonstration (@16:20)](https://youtu.be/RoZeVbbZ0o0?t=980)
+<h1>Failed RDP to IP Geolocation Information in Azure Sentinel</h1>
 
 
 <h2>Description</h2>
-<b>The Powershell script in this repository is responsible for parsing out Windows Event Log information for failed RDP attacks and using a third party API to collect geographic information about the attackers location.
+<b>The repository contains a Powershell script that extracted Windows Event Log data related to unsuccessful RDP attacks and utilized a third-party API to gather geographical details concerning the attackers location.
 </b>
 <br />
 <br />
-The script is used in this demo where I setup Azure Sentinel (SIEM) and connect it to a live virtual machine acting as a honey pot.
-We will observe live attacks (RDP Brute Force) from all around the world. I will use a custom PowerShell script to
-look up the attackers Geolocation information and plot it on an Azure Sentinel Map!
+The purpose of the script is to integrate Azure Sentinel (SIEM) with a virtual machine functioning as a honeypot. By doing so, we can actively monitor real-time RDP brute force attacks originating from various locations worldwide. To accomplish this, a customized PowerShell script will be employed to retrieve geolocation data of the attackers and visualize it on an Azure Sentinel Map.
 <br />
 <br />
 
-<p align="center">
-<img src="https://i.imgur.com/3d3CEwZ.png" height="85%" width="85%" alt="RDP event fail logs to iP Geographic information"/>
-</p>
+![IPGeolocationsite](https://github.com/josh-kell/images/assets/139269185/23c0226e-8542-41b6-974c-7274b607e1d4)
+
 <h2>Languages Used</h2>
 
-- <b>PowerShell:</b> Extract RDP failed logon logs from Windows Event Viewer 
+- <b>PowerShell:</b> Used to extract RDP failed logon logs from Windows Event Viewer 
 
 <h2>Utilities Used</h2>
 
 - <b>ipgeolocation.io:</b> IP Address to Geolocation API
 
-<h2>Attacks from China coming in; Custom logs being output with geodata</h2>
+<h2>Powershell Script Used and Example of Custom Log Data</h2>
 
-<p align="center">
-<img src="https://i.imgur.com/LhDCRz4.jpeg" height="85%" width="85%" alt="Image Analysis Dataflow"/>
-</p>
+![AzureProject7 2](https://github.com/josh-kell/images/assets/139269185/333e9ece-9e9e-4f60-a83c-43089d158fb4)
 
-<h2>World map of incoming attacks after 24 hours (built custom logs including geodata)</h2>
+![AzureProject7 1](https://github.com/josh-kell/images/assets/139269185/1f39b4a8-b2d7-4f39-a574-342a76bea74b)
 
-<p align="center">
-<img src="https://i.imgur.com/krRFrK5.png" height="85%" width="85%" alt="Image Analysis Dataflow"/>
-</p>
+<h2>World Map of Incoming Attacks after 6 Hours</h2>
+
+![FailedRDPWorldMap_Final_Country (1)](https://github.com/josh-kell/images/assets/139269185/e5fbf52c-a897-46f2-b990-b0636c4715d5)
+
 
 
 <!--
@@ -48,5 +41,3 @@ look up the attackers Geolocation information and plot it on an Azure Sentinel M
 @@ text in purple (and bold)@@
 ```
 --!>
-
-<img src="https://i.imgur.com/LhDCRz4.jpeg" height="85%" width="85%" alt="Image Analysis Dataflow"/>
